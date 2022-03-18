@@ -14,6 +14,13 @@ int main()
     int mod = num1 % num2;
     printf("两个数的余数 = %d\n", mod);
     /*num1 = num1 + 1;*/
-    printf("num1++ = %d\n", num1);
+    printf("++num1 = %d\n", ++num1);
+    printf("num1 = %d\n", num1);
+    printf("num1-- = %d\n", num1--);
+    printf("num1 = %d\n", num1);
+
+    num1 = 666;
+    num1 += 2;
+    printf("num1 = %d\n", num1);
     return 0;
 }
