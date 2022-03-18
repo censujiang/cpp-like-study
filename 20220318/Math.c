@@ -16,6 +16,7 @@ int main()
     /*num1 = num1 + 1;*/
     printf("++num1 = %d\n", ++num1);
     printf("num1 = %d\n", num1);
+    /*num1 = num1 - 1;*/
     printf("num1-- = %d\n", num1--);
     printf("num1 = %d\n", num1);
 
