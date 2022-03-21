@@ -23,5 +23,11 @@ int main()
     num1 = 666;
     num1 += 2;
     printf("num1 = %d\n", num1);
+
+    num1 = (3+2,5+5,7-4);
+    printf("num1 = %d\n", num1);
+
+    num1 = 3+2*6;
+    printf("num1 = %d\n", num1);
     return 0;
 }
