@@ -1,7 +1,2 @@
-# include <stdio.h>
-int main{
-    int a=1 5,b=7,c;
-    c=a/b+0.8;
-    printf("%d\n",c);
-    return 0;
-}
+#include <stdio.h>
+int main() { int i=3; printf("%d\n",++i); }
