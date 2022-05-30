@@ -14,9 +14,17 @@ int max(int x, int y){
 float avg(int x, int y){
     return (x+y)/2.0;
 }
+void func3(char sex){
+    if (sex == "N"){
+        printf("我是男生\n");
+    }else{
+        printf("我是女生\n");
+    }
+}
 int main(){
-    int a,b,c,d,e;
-    scanf("%d %d",&a,&b);
+    int a,b,c,d,e,f;
+    scanf("%d %d %d",&a,&b,&f);
+    func3(f);
     c = min(a,b);
     d = max(a,b);
     e = avg(a,b);
