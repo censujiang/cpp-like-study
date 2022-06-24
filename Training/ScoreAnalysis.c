@@ -1,8 +1,8 @@
 #include <stdio.h>
-int main(int argc, char *argv[])
+int main()
 {
     int scores[3][10] = {0};
-    printf("è¯·è¾“å…¥3ä¸ªç­çº§10ä¸ªå­¦ç”Ÿçš„æˆç»©ï¼š\n");
+    printf("ÇëÊäÈëÈı¸ö°àµÄ10¸öÑ§ÉúµÄ³É¼¨£»\n");
     int i, j;
     for (i = 0; i < 3; i++)
     {
@@ -11,17 +11,17 @@ int main(int argc, char *argv[])
             scanf("%d", &scores[i][j]);
         }
     }
-    printf("ä»¥ä¸‹æ˜¯åˆ†æç»“æœï¼›\n");
-    printf("%10s\t", "ç­çº§çš„ç­å·");
-    printf("%10s\t", "å¹³å‡æˆç»©");
-    printf("%10s\t", "æœ€é«˜åˆ†");
-    printf("%10s\n", "æœ€é«˜åˆ†åºå·");
-    printf("==========================================================\n");
-    int max, sum, maxIndex;
+    printf("ÒÔÏÂÊÇ·ÖÎöµÄ½á¹û£»\n");
+    printf("%10s\t", "°à¼¶µÄ°àºÅ");
+    printf("%10s\t", "Æ½¾ù³É¼¨");
+    printf("%10s\t", "×î¸ß·Ö");
+    printf("%10s\n", "×î¸ß·ÖĞòºÅ");
+    printf("====================\n");
+    int max, maxIndex, sum;
+    int allmax = 0, allmaxIndex = 0;
+    int classNum = 0, classNum2 = 0;
     float avg;
-    int allMax = 0, allMaxIndex = 0, classNum = 0;
-    int classNum2 = 0;
-    float avgMax = 0;
+    float allavg = 0;
     for (i = 0; i < 3; i++)
     {
         sum = 0;
@@ -41,21 +41,20 @@ int main(int argc, char *argv[])
         printf("%10.2f\t", ((float)sum / 10));
         printf("%10d\t", max);
         printf("%10d\n", maxIndex + 1);
-        if (max > allMax)
+        if (max > allmax)
         {
-            allMax = max;
-            allMaxIndex = maxIndex;
+            allmax = max;
+            allmaxIndex = maxIndex;
             classNum = i;
         }
-        if (avg > avgMax)
+        if (avg > allavg)
         {
-            avgMax = avg;
+            allavg = avg;
             classNum2 = i;
         }
     }
-    printf("æœ€é«˜åˆ†ä¸º%dç­ï¼Œåºå·æ˜¯%d,åˆ†æ•°æ˜¯%d\n",
-           classNum + 1, allMaxIndex + 1, allMax);
-    printf("å¹³å‡æˆç»©æœ€é«˜çš„æ˜¯%dç­ï¼Œæœ€é«˜å¹³å‡æˆç»©æ˜¯%.2f\n",
-           classNum2 + 1, avgMax);
+    printf("×î¸ß·ÖÎª%d°à£¬ĞòºÅÎª%d£¬·ÖÊıÊÇ%d\n", classNum + 1, allmaxIndex + 1, allmax);
+    printf("Æ½¾ù³É¼¨×î¸ßµÄ°àºÅÊÇ£º%d£¬Æ½¾ù³É¼¨Îª£º%.2f", classNum2 + 1, allavg);
+    system("pause");
     return 0;
 }
